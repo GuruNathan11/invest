@@ -36,3 +36,9 @@ exports.Service_Delete = function(err,callback)
     if (err) return console.error(err);
     callback(type);
 }
+
+exports.Service_delall = function(err,callback){
+    Dao.Dao_delall(err,callback);
+    if (err) return console.error(err);
+    callback(save);
+}
