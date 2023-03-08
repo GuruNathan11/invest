@@ -76,3 +76,13 @@ exports.Dao_Delete = function (req,callback)
         });
     });
 };
+
+exports.Dao_delall = function (req,callback){
+    users.deleteMany({}, function(err,user){
+        if (err) callback.send(err);
+        callback.json({
+            message : "All Stock details are deleted successfully",
+            data    : user
+        });
+    });
+};
