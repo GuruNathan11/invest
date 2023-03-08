@@ -42,5 +42,8 @@ router.route('/users/:user_id')
 .patch(Controller.update)
 .put(Controller.update)
 .delete(Controller.Delete);
+router.route('/del-all')
+.post(Controller.delall)
+
 
 module.exports = router;
